@@ -1,6 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>love</title>
+    <url>/2019/11/23/life/love/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>goal</title>
+    <url>/2019/11/23/goal/sport/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>目标</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>git</title>
+    <url>/2019/11/23/book/git/</url>
+    <content><![CDATA[<h1 align="center">git状态和撤销提交</h1>
+
+<p>一. Git的几种状态</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">未修改</span><br><span class="line">       原始内容</span><br><span class="line">已修改    ↓   </span><br><span class="line">       工 作 区</span><br><span class="line">已暂存    ↓    git add</span><br><span class="line">       暂 存 区</span><br><span class="line">已提交    ↓    git commit</span><br><span class="line">       本地仓库</span><br><span class="line">已推送    ↓    git push</span><br><span class="line">       远程仓库</span><br></pre></td></tr></table></figure>
+
+<p>二、已修改 未暂存(使用以下任意命令)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">已经修改了文件，还未进行git add.即工作区的内容不想要了</span><br><span class="line">1.git checkout .</span><br><span class="line">2.git checkout -- &lt;FILENAME&gt;</span><br><span class="line">3.git reset --hard</span><br></pre></td></tr></table></figure>
+
+<p>三、已暂存 未提交(git add.)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">已经进行了git add，还未进行git commit.即暂存区的内容不想要了</span><br><span class="line">1.git reset,git checkout .</span><br><span class="line">2.git reset --hard</span><br><span class="line">3.git reset HEAD</span><br><span class="line">4.git reset HEAD -- &lt;FILENAME&gt;</span><br></pre></td></tr></table></figure>
+
+<p>四、已提交 未推送(git commit)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">已经进行了git commit，还未进行git push;使用远程仓库覆盖本地仓库</span><br><span class="line">1.git reset --hard origin/master</span><br></pre></td></tr></table></figure>
+
+<p>五、已推送(git push)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">回滚本地仓库，强制推送覆盖远程仓库</span><br><span class="line">git reset --hard HEAD^</span><br><span class="line">git push -f</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>读书</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>linux</title>
+    <url>/2019/11/23/tech/linux/</url>
+    <content><![CDATA[<h1 id="Linux-基础"><a href="#Linux-基础" class="headerlink" title="Linux 基础"></a>Linux 基础</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>uname –help</td>
+<td>内核名称、内核版本、硬件名称、硬件平台、操作系统</td>
+</tr>
+<tr>
+<td>cat /proc/cpuinfo</td>
+<td>CPU 详细信息</td>
+</tr>
+<tr>
+<td>env</td>
+<td>环境变量</td>
+</tr>
+<tr>
+<td>free –help</td>
+<td>查看内存使用量和交换区使用量</td>
+</tr>
+<tr>
+<td>df –help</td>
+<td>查看文件系统信息</td>
+</tr>
+<tr>
+<td>du –help</td>
+<td>汇总目录文件使用情况</td>
+</tr>
+<tr>
+<td>uptime</td>
+<td>查看系统运行时间、用户数、负载</td>
+</tr>
+<tr>
+<td>cat /proc/loadavg</td>
+<td>查看系统负载</td>
+</tr>
+<tr>
+<td>ifconfig</td>
+<td>查看防火墙设置</td>
+</tr>
+<tr>
+<td>route –help</td>
+<td>查看路由表</td>
+</tr>
+<tr>
+<td>netstat -lntp</td>
+<td>查看所有监听端口</td>
+</tr>
+<tr>
+<td>netstat -nap</td>
+<td>grep 80(2755)</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>进程终止</td>
+</tr>
+<tr>
+<td>killall</td>
+<td>根据名称终止进程</td>
+</tr>
+<tr>
+<td>ps -ef</td>
+<td>查看所有进程</td>
+</tr>
+<tr>
+<td>top</td>
+<td>显示进程状态</td>
+</tr>
+<tr>
+<td>who</td>
+<td>查看当前登录用户</td>
+</tr>
+<tr>
+<td>last</td>
+<td>查看用户登录日志</td>
+</tr>
+<tr>
+<td>cut -d: -f1 /etc/passwd</td>
+<td>查看系统所有用户</td>
+</tr>
+<tr>
+<td>cut -d: -f1 /etc/group</td>
+<td>查看系统所有组</td>
+</tr>
+<tr>
+<td>crontab -l</td>
+<td>查看当前用户计划任务</td>
+</tr>
+<tr>
+<td>rpm -qa</td>
+<td>查看所有安装的软件包</td>
+</tr>
+<tr>
+<td>date</td>
+<td>系统时间</td>
+</tr>
+<tr>
+<td>reboot</td>
+<td>系统重启</td>
+</tr>
+<tr>
+<td>poweroff</td>
+<td>关机</td>
+</tr>
+</tbody></table>
+<p>文件复制</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>php</title>
+    <url>/2019/11/23/tech/php/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2019/11/20/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
