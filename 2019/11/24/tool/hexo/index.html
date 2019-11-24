@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>linux基础 | cxdblog</title>
+  <title>hexo | cxdblog</title>
   <meta name="keywords" content="">
-  <meta name="description" content="linux基础 | cxdblog">
+  <meta name="description" content="hexo | cxdblog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Node.js 安装安装hexo创建 Hexo 项目 1.进入该目录 2.hexo init 3.cnpm install本地的博客内容同步到 Github创建SSH 部署相关的 hexo 插件，Git Bash 中输 1.cnpm install hexo -server --save 2.cnpm install hexo-deployer-git --save发布继续在 Git Bash 中">
 <meta property="og:type" content="article">
@@ -341,25 +341,19 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="path-linux/linux基础" class="article article-type-path" itemscope itemprop="blogPost">
+        <article id="path-tool/hexo" class="article article-type-path" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">linux基础</h1>
+        <h1 class="article-title">hexo</h1>
     
     <div class="article-meta">
         
         
-        
-        <span class="book">
-            
-                <a  data-rel="linux">linux</a>
-            
-        </span>
         
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-11-24 11:20:09'>2019-11-24 11:16</time>
+        创建时间:<time class="date" title='更新时间: 2019-11-24 14:22:11'>2019-11-24 14:08</time>
         
     </div>
     <div class="article-meta">
@@ -381,7 +375,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-js-安装"><span class="toc-text">Node.js 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装hexo"><span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#本地的博客内容同步到-Github"><span class="toc-text">本地的博客内容同步到 Github</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发布"><span class="toc-text">发布</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -397,115 +391,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <table>
-<thead>
-<tr>
-<th>命令</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>uname –help</td>
-<td>内核名称、内核版本、硬件名称、硬件平台、操作系统</td>
-</tr>
-<tr>
-<td>cat /proc/cpuinfo</td>
-<td>CPU 详细信息</td>
-</tr>
-<tr>
-<td>env</td>
-<td>环境变量</td>
-</tr>
-<tr>
-<td>free –help</td>
-<td>查看内存使用量和交换区使用量</td>
-</tr>
-<tr>
-<td>df –help</td>
-<td>查看文件系统信息</td>
-</tr>
-<tr>
-<td>du –help</td>
-<td>汇总目录文件使用情况</td>
-</tr>
-<tr>
-<td>uptime</td>
-<td>查看系统运行时间、用户数、负载</td>
-</tr>
-<tr>
-<td>cat /proc/loadavg</td>
-<td>查看系统负载</td>
-</tr>
-<tr>
-<td>ifconfig</td>
-<td>查看防火墙设置</td>
-</tr>
-<tr>
-<td>route –help</td>
-<td>查看路由表</td>
-</tr>
-<tr>
-<td>netstat -lntp</td>
-<td>查看所有监听端口</td>
-</tr>
-<tr>
-<td>netstat -nap</td>
-<td>grep 80(2755)</td>
-</tr>
-<tr>
-<td>kill</td>
-<td>进程终止</td>
-</tr>
-<tr>
-<td>killall</td>
-<td>根据名称终止进程</td>
-</tr>
-<tr>
-<td>ps -ef</td>
-<td>查看所有进程</td>
-</tr>
-<tr>
-<td>top</td>
-<td>显示进程状态</td>
-</tr>
-<tr>
-<td>who</td>
-<td>查看当前登录用户</td>
-</tr>
-<tr>
-<td>last</td>
-<td>查看用户登录日志</td>
-</tr>
-<tr>
-<td>cut -d: -f1 /etc/passwd</td>
-<td>查看系统所有用户</td>
-</tr>
-<tr>
-<td>cut -d: -f1 /etc/group</td>
-<td>查看系统所有组</td>
-</tr>
-<tr>
-<td>crontab -l</td>
-<td>查看当前用户计划任务</td>
-</tr>
-<tr>
-<td>rpm -qa</td>
-<td>查看所有安装的软件包</td>
-</tr>
-<tr>
-<td>date</td>
-<td>系统时间</td>
-</tr>
-<tr>
-<td>reboot</td>
-<td>系统重启</td>
-</tr>
-<tr>
-<td>poweroff</td>
-<td>关机</td>
-</tr>
-</tbody></table>
-
+        <h2 id="Node-js-安装"><a href="#Node-js-安装" class="headerlink" title="Node.js 安装"></a>Node.js 安装</h2><h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><pre><code>创建 Hexo 项目
+1.进入该目录
+2.hexo init
+3.cnpm install</code></pre><h4 id="本地的博客内容同步到-Github"><a href="#本地的博客内容同步到-Github" class="headerlink" title="本地的博客内容同步到 Github"></a>本地的博客内容同步到 Github</h4><pre><code>创建SSH
+部署相关的 hexo 插件，Git Bash 中输
+1.cnpm install hexo -server --save
+2.cnpm install hexo-deployer-git --save</code></pre><h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><pre><code>继续在 Git Bash 中输入命令：
+1.先清除掉已经生成的旧文件：hexo clean
+2.再生成一次静态文件：hexo generate
+3.在本地预览下：hexo server</code></pre>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论 </span>
     </div>
@@ -518,12 +413,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>linux基础</p>
+    <p><span class="copy-title">文章标题:</span>hexo</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="cxdaty">cxdaty</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-11-24, 11:16:26</p>
-    <p><span class="copy-title">最后更新:</span>2019-11-24, 11:20:09</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/24/linux/linux%E5%9F%BA%E7%A1%80/" title="linux基础">http://cxdaty.github.io/2019/11/24/linux/linux%E5%9F%BA%E7%A1%80/</a>
+    <p><span class="copy-title">发布时间:</span>2019-11-24, 14:08:12</p>
+    <p><span class="copy-title">最后更新:</span>2019-11-24, 14:22:11</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/24/tool/hexo/" title="hexo">http://cxdaty.github.io/2019/11/24/tool/hexo/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
