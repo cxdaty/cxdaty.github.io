@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>git | cxdblog</title>
+  <title>git状态和撤销提交 | cxdblog</title>
   <meta name="keywords" content="">
-  <meta name="description" content="git | cxdblog">
+  <meta name="description" content="git状态和撤销提交 | cxdblog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Git的几种状态12345678910未修改       原始内容已修改    ↓          工 作 区已暂存    ↓    git add       暂 存 区已提交    ↓    git commit       本地仓库已推送    ↓    git push       远程仓库  已修改 未暂存(使用以下任意命令)1234已经修改了文件，还未进行git add.即工作区的内">
 <meta property="og:type" content="article">
@@ -333,9 +333,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-book/git" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="path-linux/git的状态" class="article article-type-path" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">git</h1>
+        <h1 class="article-title">git状态和撤销提交</h1>
     
     <div class="article-meta">
         
@@ -343,7 +343,7 @@
         
         <span class="book">
             
-                <a  data-rel="读书">读书</a>
+                <a  data-rel="linux">linux</a>
             
         </span>
         
@@ -351,7 +351,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-11-23 23:02:31'>2019-11-23 22:18</time>
+        创建时间:<time class="date" title='更新时间: 2019-11-24 11:38:49'>2019-11-24 11:26</time>
         
     </div>
     <div class="article-meta">
@@ -373,7 +373,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">git状态和撤销提交</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git的几种状态"><span class="toc-text">Git的几种状态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#已修改-未暂存-使用以下任意命令"><span class="toc-text">已修改 未暂存(使用以下任意命令)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#已暂存-未提交-git-add"><span class="toc-text">已暂存 未提交(git add.)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#已提交-未推送-git-commit"><span class="toc-text">已提交 未推送(git commit)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#已推送-git-push"><span class="toc-text">已推送(git push)</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -389,22 +389,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 align="center">git状态和撤销提交</h1>
+        <h2 id="Git的几种状态"><a href="#Git的几种状态" class="headerlink" title="Git的几种状态"></a>Git的几种状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">未修改</span><br><span class="line">       原始内容</span><br><span class="line">已修改    ↓   </span><br><span class="line">       工 作 区</span><br><span class="line">已暂存    ↓    git add</span><br><span class="line">       暂 存 区</span><br><span class="line">已提交    ↓    git commit</span><br><span class="line">       本地仓库</span><br><span class="line">已推送    ↓    git push</span><br><span class="line">       远程仓库</span><br></pre></td></tr></table></figure>
 
-<p>一. Git的几种状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">未修改</span><br><span class="line">       原始内容</span><br><span class="line">已修改    ↓   </span><br><span class="line">       工 作 区</span><br><span class="line">已暂存    ↓    git add</span><br><span class="line">       暂 存 区</span><br><span class="line">已提交    ↓    git commit</span><br><span class="line">       本地仓库</span><br><span class="line">已推送    ↓    git push</span><br><span class="line">       远程仓库</span><br></pre></td></tr></table></figure>
+<h3 id="已修改-未暂存-使用以下任意命令"><a href="#已修改-未暂存-使用以下任意命令" class="headerlink" title="已修改 未暂存(使用以下任意命令)"></a>已修改 未暂存(使用以下任意命令)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">已经修改了文件，还未进行git add.即工作区的内容不想要了</span><br><span class="line">1.git checkout .</span><br><span class="line">2.git checkout -- &lt;FILENAME&gt;</span><br><span class="line">3.git reset --hard</span><br></pre></td></tr></table></figure>
 
-<p>二、已修改 未暂存(使用以下任意命令)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">已经修改了文件，还未进行git add.即工作区的内容不想要了</span><br><span class="line">1.git checkout .</span><br><span class="line">2.git checkout -- &lt;FILENAME&gt;</span><br><span class="line">3.git reset --hard</span><br></pre></td></tr></table></figure>
+<h3 id="已暂存-未提交-git-add"><a href="#已暂存-未提交-git-add" class="headerlink" title="已暂存 未提交(git add.)"></a>已暂存 未提交(git add.)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">已经进行了git add，还未进行git commit.即暂存区的内容不想要了</span><br><span class="line">1.git reset,git checkout .</span><br><span class="line">2.git reset --hard</span><br><span class="line">3.git reset HEAD</span><br><span class="line">4.git reset HEAD -- &lt;FILENAME&gt;</span><br></pre></td></tr></table></figure>
 
-<p>三、已暂存 未提交(git add.)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">已经进行了git add，还未进行git commit.即暂存区的内容不想要了</span><br><span class="line">1.git reset,git checkout .</span><br><span class="line">2.git reset --hard</span><br><span class="line">3.git reset HEAD</span><br><span class="line">4.git reset HEAD -- &lt;FILENAME&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="已提交-未推送-git-commit"><a href="#已提交-未推送-git-commit" class="headerlink" title="已提交 未推送(git commit)"></a>已提交 未推送(git commit)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">已经进行了git commit，还未进行git push;使用远程仓库覆盖本地仓库</span><br><span class="line">1.git reset --hard origin/master</span><br></pre></td></tr></table></figure>
 
-<p>四、已提交 未推送(git commit)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">已经进行了git commit，还未进行git push;使用远程仓库覆盖本地仓库</span><br><span class="line">1.git reset --hard origin/master</span><br></pre></td></tr></table></figure>
+<h3 id="已推送-git-push"><a href="#已推送-git-push" class="headerlink" title="已推送(git push)"></a>已推送(git push)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">回滚本地仓库，强制推送覆盖远程仓库</span><br><span class="line">git reset --hard HEAD^</span><br><span class="line">git push -f</span><br></pre></td></tr></table></figure>
 
-<p>五、已推送(git push)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">回滚本地仓库，强制推送覆盖远程仓库</span><br><span class="line">git reset --hard HEAD^</span><br><span class="line">git push -f</span><br></pre></td></tr></table></figure>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论 </span>
     </div>
@@ -417,12 +411,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>git</p>
+    <p><span class="copy-title">文章标题:</span>git状态和撤销提交</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="cxdaty">cxdaty</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-11-23, 22:18:37</p>
-    <p><span class="copy-title">最后更新:</span>2019-11-23, 23:02:31</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/23/book/git/" title="git">http://cxdaty.github.io/2019/11/23/book/git/</a>
+    <p><span class="copy-title">发布时间:</span>2019-11-24, 11:26:55</p>
+    <p><span class="copy-title">最后更新:</span>2019-11-24, 11:38:49</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/24/linux/git%E7%9A%84%E7%8A%B6%E6%80%81/" title="git状态和撤销提交">http://cxdaty.github.io/2019/11/24/linux/git%E7%9A%84%E7%8A%B6%E6%80%81/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
